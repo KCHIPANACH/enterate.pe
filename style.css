@@ -1,0 +1,115 @@
+/*Theme Name: Enterate pe
+Theme URI: enterate.pe
+Description: Template hecho para Enterate.PE
+Version: 1.0
+Author: [@kchipanach, @jeysonrgxd]
+*/
+
+/* 
+============= COLORES =============
+*/
+:root{
+   --negro:#242424;
+   --rojo:#DB2C29;
+   --dorado:#EFB810;
+}
+
+/* 
+============= FUENTE GENERAL =============
+*/
+*{
+   font-family: 'Exo 2', sans-serif;
+}
+
+body{
+   margin: 0;
+   padding: 0;
+}
+
+/* 
+============= MENU =============
+*/
+
+nav{
+   padding: 12px 15px;
+   background-color: var(--negro);
+}
+
+.enterate__menu{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.enterate__menu h3{
+   padding: 0;
+   margin: 0;
+   color: #fff;
+}
+
+.enterate__menu--buscador{
+   position: relative;
+}
+
+.enterate__menu--buscador span{
+   position: absolute;
+   top: 50%;
+   color: #A9ABB3;
+   transform: translate(5px,-50%);
+}
+
+.enterate__menu--buscador input{
+   outline: none;
+   border:none;
+   background-color: #393C42;
+   border-radius: 5px;
+   color:#fff;
+   padding: 9px 10px 9px 28px;
+}
+
+
+.checkbox{
+   display: none;
+}
+
+.switch {
+   width: 50px;
+   height: 15px;
+   background-color: gray;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   transition: .3s ease;
+   cursor: pointer;
+}
+
+.switch span{
+   transition: .2s ease;
+   font-size: 28px;
+   color: #fff;
+}
+
+.checkbox:checked+label{
+   background-color: #7d6109;
+}
+
+.checkbox:checked+label span {
+   left: 100%;
+   transform: translateX(calc(100% - 0px));
+   color:var(--dorado)
+   /* right: 0; */
+}
+
+.parent {
+   display: grid;
+   gap:10px;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 150px);
+}
+
+.child {
+  padding: 20px;
+  color: white;
+  background-color: #0074d9;
+}
