@@ -5,10 +5,6 @@ Version: 1.0
 Author: [@kchipanach, @jeysonrgxd]
 */
 
-/* 
-============= COLORES =============
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
@@ -32,7 +28,11 @@ a {
   font-weight: 400;
   color: white;
 }
-
+header#header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
 /* estilos reutilizables */
 .m_0 {
   margin: 0;
@@ -92,7 +92,7 @@ div#content {
  */
 
 nav {
-  padding: 10px 8px;
+  padding: 12px 15px;
   background-color: var(--negro);
 }
 
@@ -100,6 +100,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #303133;
 }
 
 .enterate__menu h3 {
@@ -127,7 +128,20 @@ nav {
   color: #fff;
   padding: 9px 10px 9px 28px;
 }
+.enterate__menu--assets {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
+.menu__hidden__icono--button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  color: #a9abb3;
+  font-size: 17px;
+}
 .checkbox {
   display: none;
 }
@@ -142,23 +156,74 @@ nav {
   cursor: pointer;
 }
 
-.switch::before {
-  content: "";
-  display: block;
-  width: 33px;
-  height: 33px;
-  border-radius: 50%;
-  background-color: cornflowerblue;
+.switch span {
   transition: 0.2s ease;
+  font-size: 28px;
+  color: #fff;
 }
-.checkbox:checked + label::before {
+
+.checkbox:checked + label {
+  background-color: #7d6109;
+}
+
+.checkbox:checked + label span {
   left: 100%;
-  transform: translateX(calc(100% - 5px));
-  background-color: darkblue;
+  transform: translateX(calc(100% - 0px));
+  color: var(--dorado);
   /* right: 0; */
 }
 
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
+.parent {
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 150px);
+}
+
+.child {
+  padding: 20px;
+  color: white;
+  background-color: #0074d9;
+}
+
+/* menu hidden */
+.menu__hidden {
+  height: 100%;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  background-color: #25282c;
+  padding: 20px 0px;
+  left: -220px;
+  transition: left 0.3s linear;
+}
+
+.menu__hidden.active {
+  left: 0;
+}
+
+.menu__hidden__title {
+  color: #686e78;
+  margin: 10px 15px;
+}
+
+.menu__hidden__content--element {
+  padding: 15px;
+}
+
+.menu__hidden__content--element:hover {
+  background-color: #35383c;
+}
+
+.menu__hidden__content--element div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.menu__hidden__content--element div p {
+  margin: 0;
 }
