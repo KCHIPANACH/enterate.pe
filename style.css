@@ -1,0 +1,164 @@
+/*Theme Name: Enterate pe
+Theme URI: enterate.pe
+Description: Template hecho para Enterate.PE
+Version: 1.0
+Author: [@kchipanach, @jeysonrgxd]
+*/
+
+/* 
+============= COLORES =============
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --negro: #242424;
+  --rojo: #db2c29;
+  --dorado: #efb810;
+  --plomo: #a9abb3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--negro);
+}
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+/* estilos reutilizables */
+.m_0 {
+  margin: 0;
+}
+.w_100_contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.w_100_cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+*::-webkit-scrollbar {
+  -webkit-border-radius: 5px;
+  background-color: transparent;
+  border-radius: 5px;
+  height: 10px;
+  transition: background-color 0.2s linear;
+  width: 10px;
+}
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+  transition: background-color 0.2s linear;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  background: #aaa;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: background-color 0.2s linear;
+}
+::-webkit-scrollbar-thumb:active {
+  -webkit-border-radius: 5px;
+  background: rgba(0, 0, 0, 0.4);
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  min-height: 10px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  min-width: 10px;
+}
+
+/*  */
+div#content {
+  padding-top: 100px;
+}
+
+/*  */
+/* 
+ ============= MENU =============
+ */
+
+nav {
+  padding: 10px 8px;
+  background-color: var(--negro);
+}
+
+.enterate__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enterate__menu h3 {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+.enterate__menu--buscador {
+  position: relative;
+}
+
+.enterate__menu--buscador span {
+  position: absolute;
+  top: 50%;
+  color: #a9abb3;
+  transform: translate(5px, -50%);
+}
+
+.enterate__menu--buscador input {
+  outline: none;
+  border: none;
+  background-color: #393c42;
+  border-radius: 5px;
+  color: #fff;
+  padding: 9px 10px 9px 28px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.switch {
+  width: 60px;
+  height: 33px;
+  background-color: gray;
+  border-radius: 20px;
+  display: block;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.switch::before {
+  content: "";
+  display: block;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: cornflowerblue;
+  transition: 0.2s ease;
+}
+.checkbox:checked + label::before {
+  left: 100%;
+  transform: translateX(calc(100% - 5px));
+  background-color: darkblue;
+  /* right: 0; */
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
