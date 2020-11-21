@@ -29,6 +29,12 @@ body{
 /* 
 ============= MENU =============
 */
+#content{
+   height: 90vh;
+   position: relative;
+   overflow: hidden;
+}
+
 
 nav{
    padding: 12px 15px;
@@ -39,6 +45,7 @@ nav{
    display: flex;
    justify-content: space-between;
    align-items: center;
+   background-color: #303133;
 }
 
 .enterate__menu h3{
@@ -67,6 +74,20 @@ nav{
    padding: 9px 10px 9px 28px;
 }
 
+.enterate__menu--assets{
+   display: flex;
+   align-items: center;
+   gap: 12px;
+}
+
+.menu__hidden__icono--button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    color: #A9ABB3;
+    font-size: 17px;
+}
 
 .checkbox{
    display: none;
@@ -112,4 +133,48 @@ nav{
   padding: 20px;
   color: white;
   background-color: #0074d9;
+}
+
+/* menu hidden */
+.menu__hidden{
+   height: 100%;
+   width: 200px;
+   position: absolute;
+   top: 0; 
+   background-color: #25282c;
+   padding: 20px 0px;
+   left:-220px;
+   transition: left .3s linear;
+}
+
+.menu__hidden.active{
+   left:0;
+}
+
+.menu__hidden__title{
+   color:#686e78;
+   margin: 10px 15px;
+}
+
+.menu__hidden__content{
+}
+
+.menu__hidden__content--element{
+   padding: 15px;
+}
+
+.menu__hidden__content--element:hover{
+   background-color: #35383C;
+}
+
+.menu__hidden__content--element div{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   color:#fff;
+   font-size: 15px;
+}
+
+.menu__hidden__content--element div p{
+   margin: 0;
 }
