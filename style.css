@@ -158,19 +158,23 @@ nav {
 }
 
 .switch {
-  width: 60px;
-  height: 33px;
-  background-color: gray;
-  border-radius: 20px;
-  display: block;
-  transition: 0.3s ease;
-  cursor: pointer;
+   width: 60px;
+   height: 28px;
+   background-color: gray;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   transition: 0.3s ease;
+   cursor: pointer;
+   position: relative;
 }
 
 .switch span {
   transition: 0.2s ease;
   font-size: 28px;
   color: #fff;
+  position: absolute;
+  line-height: 0;
 }
 
 .checkbox:checked + label {
@@ -178,10 +182,8 @@ nav {
 }
 
 .checkbox:checked + label span {
-  left: 100%;
-  transform: translateX(calc(100% - 0px));
+  transform: translateX(116%);
   color: var(--dorado);
-  /* right: 0; */
 }
 
 .parent {
@@ -202,12 +204,13 @@ nav {
 .menu__hidden {
   height: 100%;
   width: 200px;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 80px;
   background-color: #25282c;
   padding: 20px 0px;
   left: -220px;
   transition: left 0.3s linear;
+  z-index: 100;
 }
 
 .menu__hidden.active {
@@ -219,8 +222,8 @@ nav {
   margin: 10px 15px;
 }
 
-.menu__hidden__content--element {
-  padding: 15px;
+.menu__hidden__content--element{
+   padding: 15px;
 }
 
 .menu__hidden__content--element:hover {
