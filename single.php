@@ -13,11 +13,37 @@ $user = wp_get_current_user();
 
 <div class="container">
     <div class="contenedorSingle">
-        <div class="barra_sidebar_single"></div>
+        <div class="barra_sidebar_single">
+            <div class="barra_sidebar_single__content">
+                <div class="barra_sidebar__item">
+                    <i class="fab fa-gratipay"></i>
+                </div>
+                <div class="barra_sidebar__item" id="shareIcon">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="contenedor_share" id="shareContent">
+                    <div class="contenedor_share__item-url">
+                        <input type="text" value="<?= the_permalink() ?>">
+                        <div class="icon_copy">
+                            <i class="fas fa-copy"></i>
+                        </div>
+                    </div>
+                    <div class="contenedor_share__item">
+                        <h5 class="m_0"> Compartir en Twitter</h5>
+                    </div>
+                    <div class="contenedor_share__item">
+                        <h5 class="m_0"> Compartir en Facebook</h5>
+                    </div>
+                    <div class="contenedor_share__item">
+                        <h5 class="m_0"> Compartir en WhatsApp</h5>
+                    </div>
+                </div>                
+            </div>
+        </div>
         <div class="contenedor_single">
 
             <div class="contenedor_single__img">
-                <img  class="w_100_cover" src="<?= the_post_thumbnail_url() ?>" alt="">
+                <img  class="w_100_cover" src="<?= the_post_thumbnail_url() ?>" alt="Imagene Destacada">
             </div>
 
             <div class="contenedor_single__title">
@@ -51,15 +77,40 @@ $user = wp_get_current_user();
             <div class="contenedor_single__content">
                 <?= the_content() ?>
             </div>
+            
+            <div class="contenedor_single__comentarios">
+            <div class="titulocomentarios">
+                <h4 class="m_0 c_dorado">Comentarios</h4>
+            </div>
+            <?php comments_template('/comments.php'); ?>
+            </div>
 
         </div>
         <div class="bara_sidebar_right">
+            <div class="ultimos_content">
+                <div class="ultimos_content__title">
+                    <h4 class="m_0"> <span class="c_dorado f_bold">Últimas</span> noticias vistas</h4>
+                </div>
+                <div class="utltimos_list">
+                    <?php  foreach([1,2,3] as $value): ?>
+                    <div class="ultimos_list__item">
+                        <div class="ultimos_list__item-title">
+                            <h5 class="m_0"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad </h5>
+                        </div>
+                        <div class="ultimos_list__item-tags">
+                            <span>#jeyson</span><span>#selacome</span><span>#doblada</span>
+                        </div>
+                    </div>
+                    <?php  endforeach; ?>
+                </div>
+            </div>
         </div>
     </div>
 
 </div>
 
 
+<script src="<?= get_template_directory_uri() ?>/js/single.js"></script>
 <?php 
   get_footer();
 ?>

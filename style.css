@@ -27,6 +27,7 @@ a {
   font-family: "Exo 2", sans-serif;
   font-weight: 400;
   color: white;
+  box-sizing: border-box;
 }
 header#header {
   position: sticky;
@@ -34,6 +35,12 @@ header#header {
   z-index: 9999;
 }
 /* estilos reutilizables */
+.c_dorado {
+  color: var(--dorado);
+}
+.f_bold {
+  font-weight: bold;
+}
 .m_0 {
   margin: 0;
 }
@@ -79,6 +86,10 @@ header#header {
 }
 ::-webkit-scrollbar-thumb:horizontal {
   min-width: 10px;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /*  */
