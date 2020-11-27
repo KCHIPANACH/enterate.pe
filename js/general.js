@@ -23,17 +23,21 @@ btnDeseaPublicar.addEventListener("click", ()=>{
    contenidoPublicar.classList.add("active");
 })
 
-
-/* URL ADD NEW POST WP 
-http://localhost/enterate/wp-admin/post-new.php
-CONTRASEÑA ANONIMO ENTERATE WP
-ySAUJ04sjZkZpddRgt%wbyo4
-Anonimo
-anonimo@anonimoenterate.pe
-*/
-
 contenidoPublicar.addEventListener("click", (e)=>{
    if(e.target == e.currentTarget){
       contenidoPublicar.classList.remove("active")
    }
 })
+
+/* endpoint anonimo */
+
+window.btnAnonimo.onclick = ()=>{
+   const urlEndpoint = `${URL_BASE}/login-with-anonimus/`;
+
+   fetch(urlEndpoint, {
+      method: 'POST'
+   })
+   .then(resp =>resp.json())
+   .catch(err => console.log(err))
+   .then(res => location.href=res)
+}

@@ -29,7 +29,7 @@
 
             <h3>
                <span><i class="fas fa-question-circle"></i></span>&nbsp;
-               Enterate.pe
+               Enterate.pe <?php  var_dump(is_user_logged_in()); ?>
             </h3>
 
          </div>
@@ -73,7 +73,7 @@
          <div class="content_deseapublicar__pasodos">
             <h4 class="m_0">¿Cómo deseas publicar?</h4>
             <div class="pasodos__enlaces">
-               <a href="#"><button> Anonimo </button></a>
+               <a href="#"><button id="btnAnonimo"> Anonimo </button></a>
                <a href="#"><button> Inicia Sesión </button></a>
             </div>
          </div>
