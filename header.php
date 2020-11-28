@@ -29,7 +29,7 @@
 
             <h3>
                <span><i class="fas fa-question-circle"></i></span>&nbsp;
-               Enterate.pe <?php  var_dump(is_user_logged_in()); ?>
+               Enterate.pe
             </h3>
 
          </div>

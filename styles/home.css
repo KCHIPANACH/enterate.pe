@@ -19,6 +19,13 @@
   display: none;
   animation: fadeIn 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+.icon_love_card.active {
+  display: block !important;
+}
+
+.icon_love_card.active i {
+  color: var(--rojo);
+}
 
 .contenedorGrillas__item:hover .icon_love_card {
   display: block;

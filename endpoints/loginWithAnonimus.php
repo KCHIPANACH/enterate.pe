@@ -1,22 +1,23 @@
 <?php 
-/*
-Template Name: Login With Anonimus User
+    /*
+    Template Name: Login With Anonimus User
 
-http://localhost/enterate/wp-admin/post-new.php
-CONTRASEÑA ANONIMO ENTERATE WP
-ySAUJ04sjZkZpddRgt%wbyo4
-Anonimo
-anonimo@anonimoenterate.pe
-*/
-header("Acces-Control-Allow-Origin: *");
+    http://localhost/enterate/wp-admin/post-new.php
+    CONTRASEÑA ANONIMO ENTERATE WP
+    ySAUJ04sjZkZpddRgt%wbyo4
+    Anonimo
+    anonimo@anonimoenterate.pe
+    */
+    
+    header("Acces-Control-Allow-Origin: *");
 
-$userAnonimo = 'anonimo@anonimoenterate.pe';
-$contraseñaAnonimo = 'ySAUJ04sjZkZpddRgt%wbyo4';
+    $userAnonimo = 'anonimo@anonimoenterate.pe';
+    $contraseñaAnonimo = 'ySAUJ04sjZkZpddRgt%wbyo4';
 
-$userdata = [
-    'user_login' => $userAnonimo,
-    'user_password'=> $contraseñaAnonimo
-];
+    $userdata = [
+        'user_login' => $userAnonimo,
+        'user_password'=> $contraseñaAnonimo
+    ];
 
     $user_id = wp_signon($userdata);
 

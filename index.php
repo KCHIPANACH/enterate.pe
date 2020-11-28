@@ -7,7 +7,7 @@
 
 <section>
   <div class="container">
-    <div class="contenedorGrillas">
+    <div class="contenedorGrillas" id="contenedorGrila">
         <?php 
             $args = [
               'post_type' => 'post',
@@ -22,7 +22,7 @@
                 $result = substr( $excerpt, 0, strrpos( $excerpt, ' ' ) );
             ?>  
               <div class="contenedorGrillas__item">
-                <div class="icon_love_card" data-id="<?= get_the_ID() ?>">
+                <div class="icon_love_card" data-id="<?= get_the_ID() ?>" onclick="handleLikePost(event,'<?= get_the_ID() ?>')">
                   <i class="fab fa-gratipay"></i>
                 </div>
                 <a href="<?= the_permalink() ?>">
@@ -58,7 +58,7 @@
 </section>
 
 
-
+<script src="<?= get_template_directory_uri() ?>/js/home.js"></script>
 <?php 
   get_footer();
 ?>
