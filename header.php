@@ -16,6 +16,7 @@
       const IP_CLIENT = `<?=  $_SERVER['REMOTE_ADDR'] ?>`
       const URL_DIRECTORY = `<?= get_template_directory_uri()  ?>`
    </script>
+   
    <script src="https://kit.fontawesome.com/7ed4672151.js" crossorigin="anonymous"></script>
 </head>
 
@@ -29,7 +30,7 @@
 
             <h3>
                <span><i class="fas fa-question-circle"></i></span>&nbsp;
-               Enterate.pe <?php  var_dump(is_user_logged_in()); ?>
+               Enterate.pe
             </h3>
 
          </div>
