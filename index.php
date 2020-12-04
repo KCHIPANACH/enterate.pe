@@ -22,7 +22,7 @@
                 $result = substr( $excerpt, 0, strrpos( $excerpt, ' ' ) );
             ?>  
               <div class="contenedorGrillas__item">
-                <div class="icon_love_card" data-id="<?= get_the_ID() ?>">
+                <div class="icon_love_card" onclick="handleLikePost(event,'<?= get_the_ID() ?>')" data-id="<?= get_the_ID() ?>">
                   <i class="fab fa-gratipay"></i>
                 </div>
                 <a href="<?= the_permalink() ?>">
@@ -35,7 +35,7 @@
                   <div class="contenedorGrillas__item-img">
                     <img
                         class="w_100_cover"
-                        src="<?= get_the_post_thumbnail() ?>" 
+                        src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" 
                         alt="Imagen Loop">
                   </div>
                 </a>
@@ -57,8 +57,9 @@
   </div>
 </section>
 
-
-
+<script src="<?= get_template_directory_uri() ?>/js/home.js"></script>
 <?php 
+
+var_dump(json_decode('{"like":[12,13,14,15]}'));
   get_footer();
 ?>

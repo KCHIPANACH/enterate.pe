@@ -2,8 +2,6 @@
 add_theme_support( 'post-thumbnails' );
 require get_template_directory() . '/comment_perso.php';
 
-
-
 function my_custom_fonts() {
 	$user_id = get_current_user_id();
 	$user_info = get_userdata( $user_id );
@@ -91,7 +89,7 @@ function my_custom_fonts() {
                 let URL_ADMIN = '<?= get_site_url() ?>/wp-admin/post-new.php';
                 location.href= URL_ADMIN;
             </script>
-            <?php
+        <?php
         }
 	}
 	

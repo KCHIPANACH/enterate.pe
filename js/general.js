@@ -1,5 +1,6 @@
 const btn_active_menu = document.querySelector(".menu__hidden__icono--button")
 const menu_hidden = document.querySelector(".menu__hidden") 
+const switch_input = document.getElementById("switch-input")
 
 console.log(btn_active_menu)
 
@@ -41,3 +42,28 @@ window.btnAnonimo.onclick = ()=>{
    .catch(err => console.log(err))
    .then(res => location.href=res)
 }
+
+switch_input.addEventListener("click",({target})=>{
+   if(target.checked){
+      let likes_data = Array.from(JSON.parse(localStorage.getItem("likePost")))
+      let send_JSON = {
+         "like":likes_data
+      }
+
+      let formData = new FormData()
+      formData.append("id_post", JSON.stringify(send_JSON))
+
+      const urlEndpoint = `${URL_BASE}/getfavoritesapi/`;
+
+      fetch(urlEndpoint, {
+         method: 'POST',
+         body: formData
+      })
+      .then(response => response.json())
+      .then(data => console.log(res))
+   }
+
+   else{
+
+   }
+})
